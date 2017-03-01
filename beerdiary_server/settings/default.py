@@ -39,6 +39,7 @@ INSTALLED_APPS = (
 
     'beerdiary_server',
     'auth_ex',
+    'pubs',
 )
 
 AUTH_USER_MODEL = 'auth_ex.User'
@@ -62,7 +63,7 @@ MEDIA_ROOT = root('../media')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': (
