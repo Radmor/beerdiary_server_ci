@@ -11,7 +11,6 @@ dirname = path.dirname
 
 BASE_DIR = dirname(dirname(dirname(path.abspath(__file__))))
 DEBUG = env('DEBUG')
-TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', [])
 
@@ -40,6 +39,7 @@ INSTALLED_APPS = (
     'beerdiary_server',
     'auth_ex',
     'pubs',
+    'rest_framework',
 )
 
 AUTH_USER_MODEL = 'auth_ex.User'

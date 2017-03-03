@@ -2,11 +2,22 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-import pubs.urls
+from rest_framework import routers
+
+
+import pubs.api
+
+router = routers.DefaultRouter()
+
+router.register(
+    'pubs', pubs.api.PubViewSet, 'pubs',
+)
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^pubs/', include(pubs.urls, namespace='pubs'))
+    url(r'^api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
 if 'rosetta' in settings.INSTALLED_APPS:
