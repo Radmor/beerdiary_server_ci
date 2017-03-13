@@ -9,3 +9,7 @@ class Event(models.Model):
     end_date = models.DateTimeField(_('end date'), blank=True, null=True)
     description = models.TextField(_('description'), blank=True, null=True)
     place = models.ForeignKey(Pub, related_name='events')
+
+    class Meta:
+        verbose_name = _('event')
+        verbose_name_plural = _('events')
