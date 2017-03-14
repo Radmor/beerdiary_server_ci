@@ -14,6 +14,5 @@ pytz
 raven
 Sphinx
 sphinx-rtd-theme
-pytest-django
 django-environ
 djangorestframework
