@@ -35,11 +35,13 @@ INSTALLED_APPS = (
     # 'sendfile',
     'debug_toolbar',
     'registration',
+    'rest_framework',
 
     'beerdiary_server',
     'auth_ex',
     'pubs',
-    'rest_framework',
+    'events',
+
 )
 
 AUTH_USER_MODEL = 'auth_ex.User'

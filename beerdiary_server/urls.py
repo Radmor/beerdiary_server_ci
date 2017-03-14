@@ -6,13 +6,16 @@ from rest_framework import routers
 
 
 import pubs.api
+import events.api
 
 router = routers.DefaultRouter()
 
 router.register(
     'pubs', pubs.api.PubViewSet, 'pubs',
 )
-
+router.register(
+    'events', events.api.EventViewSet, 'events',
+)
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
