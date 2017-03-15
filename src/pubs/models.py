@@ -24,8 +24,7 @@ class Pub(models. Model):
     atmosphere_description = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return self.city
-
+        return self.name
 
     class Meta:
         verbose_name = _('pub')
