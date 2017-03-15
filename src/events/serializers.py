@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from pubs.serializers import PubSerializer
 
 from .models import Event
 

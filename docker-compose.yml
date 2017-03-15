@@ -13,10 +13,6 @@ services:
       - postgres
     ports:
       - "8000:8000"
-    volumes:
-      - static:/static
 volumes:
-  static:
-    driver: local
-  media:
+  .:
     driver: local

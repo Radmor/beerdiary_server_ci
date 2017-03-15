@@ -10,6 +10,9 @@ class Event(models.Model):
     description = models.TextField(_('description'), blank=True, null=True)
     place = models.ForeignKey(Pub, related_name='events')
 
+    def __str__(self):
+        return "{} {}".format(self.name, self.start_date)
+
     class Meta:
         verbose_name = _('event')
         verbose_name_plural = _('events')
