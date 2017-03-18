@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'registration',
     'rest_framework',
+    'rest_framework.authtoken',
 
     'beerdiary_server',
     'auth_ex',
@@ -183,3 +184,11 @@ INTERNAL_IPS = ['127.0.0.1']
 #     'propagate': True,
 #     'formatter': 'simple',
 # }
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
